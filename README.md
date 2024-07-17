@@ -10,4 +10,6 @@
   <blockquote>Bootcamp | Conteudo | Curso | Dev | Mentoria </blockquote>  
 </p>
 
+<p>Extra: Utilizei o <strong>Lombok</strong> para agilizar o processo de desenvolvimento</p>
+
 <p>Acesse meu perfil na DIO: <a href="https://web.dio.me/users/igordaniel1903?tab=achievements"> IgorDaniel</a></p>
