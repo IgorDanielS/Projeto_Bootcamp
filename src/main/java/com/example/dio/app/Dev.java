@@ -4,15 +4,20 @@ import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Data
-@AllArgsConstructor
 public class Dev {
     private String nome;
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+
+    public Dev(String nome)
+    {
+        this.nome = nome;
+    }
 
     public void inscreverBootcamp(Bootcamp bootcamp)
     {

@@ -1,10 +1,12 @@
 package com.example.dio.app;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Data
+@NoArgsConstructor
 public class Mentoria extends Conteudo {
     private LocalDate data;
 
@@ -19,4 +21,10 @@ public class Mentoria extends Conteudo {
     {
         return XP_BASE + 10d;
     }
+    public String toString()
+    {
+        return "Mentoria: " + super.getTitulo() + "\n" + //
+                        "Descricao: " + super.getDescricao(); 
+    }
+
 }

@@ -6,14 +6,23 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Bootcamp {
     private String nome;
     private String descricao;
     private LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
+    private Set<Conteudo> conteudos = new LinkedHashSet<>();
+
+    public Bootcamp(String nome, String descricao)
+    {
+        this.nome = nome;
+        this.descricao = descricao;
+    }
   
     @Override
     public int hashCode() {
@@ -44,5 +53,6 @@ public class Bootcamp {
             return false;
         return true;
     }
-    private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    
+    
 }

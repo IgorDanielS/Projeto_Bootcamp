@@ -1,8 +1,10 @@
 package com.example.dio.app;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Curso extends Conteudo {
     private int cargaHoraria;
 
@@ -15,5 +17,9 @@ public class Curso extends Conteudo {
     @Override
     public double calculaXp(){
         return XP_BASE * cargaHoraria;
+    }
+    public String toString()
+    {
+        return "Curso: " + super.getTitulo() + "\nDescricao: " + super.getDescricao(); 
     }
 }

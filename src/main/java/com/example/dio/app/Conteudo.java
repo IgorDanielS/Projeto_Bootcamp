@@ -1,9 +1,12 @@
 package com.example.dio.app;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public abstract class Conteudo {
     private String titulo;
@@ -13,4 +16,10 @@ public abstract class Conteudo {
 
     public abstract double calculaXp();
 
+
+    
+    public String toString()
+    {
+        return "Titulo: " + this.titulo + "Descricao: " + this.descricao; 
+    }
 }
