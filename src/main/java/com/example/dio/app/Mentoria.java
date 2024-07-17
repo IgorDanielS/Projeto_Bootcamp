@@ -4,12 +4,19 @@ import lombok.Data;
 
 import java.time.LocalDate;
 
-import lombok.AllArgsConstructor;
-
-@AllArgsConstructor
 @Data
-public class Mentoria {
-    private String titulo;
-    private String descricao;
+public class Mentoria extends Conteudo {
     private LocalDate data;
+
+    public Mentoria(String titulo, String descricao)
+    {
+        super(titulo,descricao);
+        this.data = data.now();
+    }
+
+    @Override
+    public double calculaXp()
+    {
+        return XP_BASE + 10d;
+    }
 }
